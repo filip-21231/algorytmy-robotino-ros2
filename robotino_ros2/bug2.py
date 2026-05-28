@@ -77,7 +77,6 @@ class Bug2Node(Node):
         self.clear_path_client = self.create_client(Trigger, 'clear_path')
 
         self.create_subscription(Float64MultiArray, 'robotino/odometry', self.odom_cb, 10)
-        self.create_subscription(Float64MultiArray, 'robotino/distance_sensors', self.ir_cb, 10)
         self.create_subscription(LaserScan, 'scan', self.scan_cb, 10)
         self.create_subscription(Pose2D, 'robotino/goal', self.goal_cb, 10)
 
@@ -136,9 +135,6 @@ class Bug2Node(Node):
             if self.start_x is None:
                 self.start_x, self.start_y = self.x, self.y
 
-    def ir_cb(self, msg):
-        if len(msg.data) == 9:
-            self.ir = msg.data
 
     def scan_cb(self, msg):
         self.scan = msg
