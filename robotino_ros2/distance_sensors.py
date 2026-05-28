@@ -18,7 +18,7 @@ class DistancePub(Node):
         self.timer = self.create_timer(0.02, self.timer_callback)
 
         self.min_val = 0.04
-        self.max_val = 0.41
+        self.max_val = 0.30
         self.safety_distance = 0.18
 
         self.alpha_approach = 1.0
