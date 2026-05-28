@@ -1,0 +1,7 @@
+log/
+install/
+build/
+robotino_ros2.egg-info
+__pycache__/
+*.pyc
+.pytest_cache/
