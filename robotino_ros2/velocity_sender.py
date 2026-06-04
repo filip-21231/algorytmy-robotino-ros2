@@ -8,7 +8,7 @@ import time
 
 URL = 'http://192.168.0.12'
 
-class RobotinoVelocitySender(Node):
+class VelocitySender(Node):
 
     VELOCITY_TIMEOUT = 0.2
     SEND_PERIOD = 0.1
